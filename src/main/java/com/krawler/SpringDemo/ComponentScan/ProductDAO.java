@@ -1,9 +1,12 @@
 package com.krawler.SpringDemo.ComponentScan;
 
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public class ProductDAO {
+	
+	@Value("${product.name}")
 	private String productName;
 
 	public String getProductName() {

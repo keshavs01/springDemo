@@ -4,7 +4,7 @@ import javax.inject.Named;
 
 
 @Named
-public class ProductDAO {
+public class ProductDAOCDI {
 	private String productName;
 
 	public String getProductName() {

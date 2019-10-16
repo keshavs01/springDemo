@@ -12,7 +12,7 @@
 	<artifactId>SpringDemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringDemo</name>
-	<description>Demo project for Spring</description>
+	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -20,21 +20,27 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-core</artifactId>
 		</dependency>
 		
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
 		</dependency>
 
 		<dependency>
-		    <groupId>org.slf4j</groupId>
-		    <artifactId>slf4j-api</artifactId>
-		    <version>1.7.28</version>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
 		</dependency>
 		
+		<dependency>
+		    <groupId>log4j</groupId>
+		    <artifactId>log4j</artifactId>
+		    <version>1.2.17</version>
+		</dependency>
+
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

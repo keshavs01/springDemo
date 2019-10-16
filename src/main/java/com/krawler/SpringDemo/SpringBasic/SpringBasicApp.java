@@ -1,26 +1,27 @@
 package com.krawler.SpringDemo.SpringBasic;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.AbstractApplicationContext;
-
-import com.krawler.SpringDemo.CDI.ProductBusinessCDI;
-
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @Configuration
-@ComponentScan("com.krawler.SpringDemo.CDI")
-public class SpringCDI {
-
+@ComponentScan("com.krawler.SpringDemo.SpringBasic")
+public class SpringBasicApp {
 	public static void main(String[] args) {
 		
-		ApplicationContext appContext = new AnnotationConfigApplicationContext(SpringCDI.class);
-//		BinarySearchImpl binarySearch = appContext.getBean(BinarySearchImpl.class);
+		int list[] = {1,2,3,4};
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("beans.xml");
+		BinarySearchImpl search = appContext.getBean(BinarySearchImpl.class);
 		
-		ProductBusinessCDI product = appContext.getBean(ProductBusinessCDI.class);
+		System.out.println(search);
+		search.binarySearch(list, 2);
 		
-		product.printProduct();
 		((AbstractApplicationContext) appContext).close();
-				
+		
 	}
+
 }
